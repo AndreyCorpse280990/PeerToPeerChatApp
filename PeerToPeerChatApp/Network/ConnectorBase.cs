@@ -14,6 +14,12 @@ namespace PeerToPeerChatApp.Network
         protected IPEndPoint localEndPoint;
         protected IPEndPoint remoteEndPoint;
 
+        public ConnectorBase(string localIpStr, int localPort, string remoteIpStr, int remotePort)
+        {
+            localEndPoint = new IPEndPoint(IPAddress.Parse(localIpStr), localPort);
+            remoteEndPoint = new IPEndPoint(IPAddress.Parse(remoteIpStr), remotePort);
+        }
+
         // свойства строк endpoint-ов
         public string LocalEndPointStr {  get { return localEndPoint.ToString(); } }
         public string RemoteEndPointStr { get { return remoteEndPoint.ToString(); } }

@@ -57,6 +57,8 @@
     </ApplicationDefinition>
     <Compile Include="Stub\CommunicatorStub.cs" />
     <Compile Include="Stub\ConnectorStub.cs" />
+    <Compile Include="Udp\UdpConnector.cs" />
+    <Compile Include="Udp\UdpFixedBufferCommunicator.cs" />
     <Page Include="ChatWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

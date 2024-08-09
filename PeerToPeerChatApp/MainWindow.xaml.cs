@@ -44,8 +44,10 @@ namespace PeerToPeerChatApp
             try
             {
                 // достанем данные для ожидания подключения
-                string localIpStr = ipTextBox.Text;
-                int localPort = Convert.ToInt32(portTextBox.Text);
+                string localIpStr = localIpTextBox.Text;
+                int localPort = Convert.ToInt32(localPortTextBox.Text);
+                string remoteIpStr = remoteIpTextBox.Text;
+                int remotePort = Convert.ToInt32(remotePortTextBox.Text);
                 // используя эти данные создадим нужный коннектор
                 using (ConnectorBase connector = new ConnectorStub(localIpStr, localPort))
                 {

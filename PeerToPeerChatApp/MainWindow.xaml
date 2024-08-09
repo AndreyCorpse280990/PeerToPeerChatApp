@@ -7,10 +7,12 @@
         mc:Ignorable="d"
         Title="PeerToPeer Chat" 
         FontFamily="Consolas" FontSize="20"
-        Height="200" MinHeight="200" MaxHeight="200"
+        Height="280" MinHeight="280" MaxHeight="280"
         Width="600" MinWidth="600" MaxWidth="600">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
@@ -20,16 +22,24 @@
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
         
-        <!-- IP -->
-        <Label Content="IP:" Margin="10" Grid.Row="0" Grid.Column="0" />
-        <TextBox x:Name="ipTextBox" Text="127.0.0.1" Margin="10" Grid.Row="0" Grid.Column="1" />
+        <!-- Local IP -->
+        <Label Content="Local IP:" Margin="10" Grid.Row="0" Grid.Column="0" />
+        <TextBox x:Name="localIpTextBox" Text="127.0.0.1" Margin="10" Grid.Row="0" Grid.Column="1" />
         
         <!-- Port -->
-        <Label Content="Port:" Margin="10" Grid.Row="1" Grid.Column="0" />
-        <TextBox x:Name="portTextBox" Text="1024" Margin="10" Grid.Row="1" Grid.Column="1" />
-        
+        <Label Content="Local Port:" Margin="10" Grid.Row="1" Grid.Column="0" />
+        <TextBox x:Name="localPortTextBox" Text="1024" Margin="10" Grid.Row="1" Grid.Column="1" />
+
+        <!-- Remote IP -->
+        <Label Content="Remote IP:" Margin="10" Grid.Row="2" Grid.Column="0" />
+        <TextBox x:Name="remoteIpTextBox" Text="127.0.0.1" Margin="10" Grid.Row="2" Grid.Column="1" />
+
+        <!-- Port -->
+        <Label Content="Remote Port:" Margin="10" Grid.Row="3" Grid.Column="0" />
+        <TextBox x:Name="remotePortTextBox" Text="1025" Margin="10" Grid.Row="3" Grid.Column="1" />
+
         <!-- Buttons -->
-        <Button x:Name="waitConnectionButton" Content="Ожидание подключения" Margin="10" Grid.Row="2" Grid.Column="0" Click="waitConnectionButton_Click" />
-        <Button x:Name="connectionButton" Content="Подключение" Margin="10" Grid.Row="2" Grid.Column="1" Click="connectionButton_Click" />
+        <Button x:Name="waitConnectionButton" Content="Ожидание подключения" Margin="10" Grid.Row="4" Grid.Column="0" Click="waitConnectionButton_Click" />
+        <Button x:Name="connectionButton" Content="Подключение" Margin="10" Grid.Row="4" Grid.Column="1" Click="connectionButton_Click" />
     </Grid>
 </Window>
